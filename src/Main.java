@@ -1,7 +1,13 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("HELLO, WELCOME TO PANDAI SDN BHD");
+        Database db = new Database("jdbc:mysql://db4free.net", "3306", "Worker", "helloworld2023", "helloworld");
+        db.connect();
+        db.runQuery("Select * from Worker");
+
+        DatabaseSingle.display();
+
+        /*System.out.println("HELLO, WELCOME TO PANDAI SDN BHD");
 
         Student Aisyah = new Student();
         Name thename = new Name("Siti","Nur","Aisyah");
@@ -29,10 +35,10 @@ public class Main {
         TutorList tutor2023 = new TutorList();
         tutor2023.add(Shaf);
 
-        /*boolean isIn = student2023.find(Aisyah.getStudname());
+        *//*boolean isIn = student2023.find(Aisyah.getStudname());
             if(isIn = true)
                 System.out.println("EXIST");
-        */
+        *//*
         
         for (int i=0; i<5; i++){
             Aisyah.setMark(100, i);
@@ -50,6 +56,6 @@ public class Main {
         System.out.println("Avg = "+Anis.calcAvg());
         System.out.println("Min = "+ Anis.calcMin());
 
-        System.out.println("\n" + Shaf.toString());
+        System.out.println("\n" + Shaf.toString());*/
     }
 }
